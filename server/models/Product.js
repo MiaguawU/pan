@@ -1,15 +1,9 @@
+// server/models/Product.js
 const { DataTypes } = require('sequelize');
 const sequelize = require('../config/database');
 
 const Product = sequelize.define('Product', {
-  
-    id: {
-        type: DataTypes.INTEGER,
-        allowNull: false,
-        primaryKey: true,
-      },  
-      
-      nombre: {
+  nombre: {
     type: DataTypes.STRING,
     allowNull: false,
   },
@@ -29,26 +23,5 @@ const Product = sequelize.define('Product', {
     allowNull: false,
   },
 });
-const Temp = sequelize.define('Temp', {
-  
-    id: {
-        type: DataTypes.INTEGER,
-        allowNull: false,
-        primaryKey: true,
-      },  
-      temporada: {
-    type: DataTypes.STRING,
-    allowNull: false,
-  },
-  
-  fechai: {
-    type: DataTypes.TIME,
-    allowNull: false,
-  },
-  fechat: {
-    type: DataTypes.TIME,
-    allowNull: false,
-  },
-});
 
-
+module.exports = Product;
